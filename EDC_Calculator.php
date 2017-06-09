@@ -72,6 +72,12 @@ session_start();
 <div class="edcCalculator">
     <?php
 
+    $currentYear = date('Y');
+
+    $yearCap = $currentYear + 19;
+
+    $beforeYear = $currentYear + 20;
+
     if (isset($_GET['submit'])) {
 
         unset($_SESSION['lmpDate']);
@@ -81,7 +87,7 @@ session_start();
         $lmpMonth = $_GET['month'];
         $lmpYear = $_GET['year'];
 
-        if ($lmpYear >= "1970" && $lmpYear <= "2036" && $lmpDay >= "1" && $lmpDay <= "31" && $lmpMonth >= "1" && $lmpMonth <= "12" ) {
+        if ($lmpYear >= "1970" && $lmpYear <= $yearCap && $lmpDay >= "1" && $lmpDay <= "31" && $lmpMonth >= "1" && $lmpMonth <= "12" ) {
 
             $_SESSION['lmpDate'][] = array($lmpMonth, $lmpDay, $lmpYear);
 
@@ -111,7 +117,7 @@ session_start();
             }
         } else {
 
-            echo "<h1>Please enter a proper date on or after 01/01/1970 and before 01/01/2037</h1>";
+            echo "<h1>Please enter a proper date on or after 01/01/1970 and before 01/01/$beforeYear</h1>";
 
         }
     } else if (isset($_SESSION['lmpDate']) && isset($_SESSION['edcResults'])) {
