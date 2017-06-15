@@ -22,6 +22,31 @@ session_start();
             min-width: 10%;
         }
 
+        #btnBegin {
+            background: #fafafa;
+            box-shadow: none;
+            border-radius: 0;
+            border-color: #dad6d3;
+            border-width: 1px 0 0 0;
+            color: #000;
+            display:block;
+            font-family: Helvetica Neue, Helvetica , Arial, sans-serif;
+            font-size: 24px;
+            font-weight: 200;
+            margin: 0;
+            position: absolute;
+            bottom: -16px;
+            right: -9px;
+            text-align: right;
+            width: 2000px;
+            height: 60px;
+        }
+
+        .continueArrow {
+            color: #106e9d;
+            font-weight: bold;
+        }
+
     </style>
     <link href="https://www.wisc-online.com/ARISE_Files/CSS/AriseMainCSS.css?random=wer" rel="stylesheet">
     <!-- CSS for AutoComplete -->
@@ -104,13 +129,13 @@ session_start();
 
                 foreach ($_SESSION['lmpDate'] as $lmpDate) {
 
-                    echo "Entered LMP is " . $lmpDate[0] . "/" . $lmpDate[1] . "/" . $lmpDate[2] . "!<br><br>";
+                    echo "<h1>Entered LMP is " . $lmpDate[0] . "/" . $lmpDate[1] . "/" . $lmpDate[2] . "!</h1><br><br>";
 
                 }
 
                 foreach ($_SESSION['edcResults'] as $result) {
 
-                    echo "Calculated EDC is " . $result[0] . "/" . $result[1] . "/" . $result[2] . "!<br><br>";
+                    echo "<h1>Calculated EDC is " . $result[0] . "/" . $result[1] . "/" . $result[2] . "!</h1><br><br>";
 
                 }
 
@@ -124,13 +149,13 @@ session_start();
 
         foreach ($_SESSION['lmpDate'] as $lmpDate) {
 
-            echo "Entered LMP is " . $lmpDate[0] . "/" . $lmpDate[1] . "/" . $lmpDate[2] . "!<br><br>";
+            echo "<h1>Entered LMP is " . $lmpDate[0] . "/" . $lmpDate[1] . "/" . $lmpDate[2] . "!</h1><br><br>";
 
         }
 
         foreach ($_SESSION['edcResults'] as $result) {
 
-            echo "Calculated EDC is " . $result[0] . "/" . $result[1] . "/" . $result[2] . "!<br><br>";
+            echo "<h1>Calculated EDC is " . $result[0] . "/" . $result[1] . "/" . $result[2] . "!</h1><br><br>";
 
         }
 
@@ -141,9 +166,22 @@ session_start();
     }
     ?>
 </div>
+<button type="button" id="btnBegin">Continue<span class="continueArrow"> &rang; </span></button>
 <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 <!--Link for the jquery auto-complete code-->
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</script>
+<script type="text/javascript">
+    /*
+     JS for the continue button
+     */
+    var ARIS = {};
+
+    ARIS.ready = function() {
+        document.getElementById("btnBegin").onclick = function() {
+            ARIS.exit();
+        }
+    }
 </script>
 <script type="text/javascript" src="https://www.wisc-online.com/ARISE_Files/JS/PatientInfo/HectorFernandezInfo.js"></script>
 <script type="text/javascript" src="https://www.wisc-online.com/ARISE_Files/JS/ptntInfoInclude.js"></script>
