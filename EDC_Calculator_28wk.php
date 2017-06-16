@@ -182,18 +182,18 @@ session_start();
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </script>
 <script type="text/javascript">
-    /*
-     JS for the continue button
-     */
-    var ARIS = {};
+/*
+ JS for the continue button
+ */
+var ARIS = {};
 
-    ARIS.ready = function() {
-        document.getElementById("btnBegin").onclick = function() {
-            ARIS.exit();
-        }
+ARIS.ready = function() {
+    document.getElementById("btnBegin").onclick = function() {
+        ARIS.exit();
     }
+}
 </script>
-<script type="text/javascript" src="https://www.wisc-online.com/ARISE_Files/JS/PatientInfo/OliviaBrooks.js"></script>
+<script type="text/javascript" src="https://www.wisc-online.com/ARISE_Files/JS/PatientInfo/OliviaBrooks_28w1d.js"></script>
 <script type="text/javascript" src="https://www.wisc-online.com/ARISE_Files/JS/OBptntInfoInclude.js"></script>
 </body>
 </html>
