@@ -139,13 +139,13 @@ session_start();
 
                 foreach ($_SESSION['lmpDate'] as $lmpDate) {
 
-                    echo "<h1>Entered LMP is " . $lmpDate[0] . "/" . $lmpDate[1] . "/" . $lmpDate[2] . "!</h1><br><br>";
+                    echo "<h1>Entered LMP is " . $lmpDate[0] . "/" . $lmpDate[1] . "/" . $lmpDate[2] . "</h1><br><br>";
 
                 }
 
                 foreach ($_SESSION['edcResults'] as $result) {
 
-                    echo "<h1>Calculated EDC is " . $result[0] . "/" . $result[1] . "/" . $result[2] . "!</h1><br><br>";
+                    echo "<h1>Calculated EDC is " . $result[0] . "/" . $result[1] . "/" . $result[2] . "</h1><br><br>";
 
                 }
 
@@ -159,13 +159,13 @@ session_start();
 
         foreach ($_SESSION['lmpDate'] as $lmpDate) {
 
-            echo "<h1>Entered LMP is " . $lmpDate[0] . "/" . $lmpDate[1] . "/" . $lmpDate[2] . "!</h1><br><br>";
+            echo "<h1>Entered LMP is " . $lmpDate[0] . "/" . $lmpDate[1] . "/" . $lmpDate[2] . "</h1><br><br>";
 
         }
 
         foreach ($_SESSION['edcResults'] as $result) {
 
-            echo "<h1>Calculated EDC is " . $result[0] . "/" . $result[1] . "/" . $result[2] . "!</h1><br><br>";
+            echo "<h1>Calculated EDC is " . $result[0] . "/" . $result[1] . "/" . $result[2] . "</h1><br><br>";
 
         }
 
